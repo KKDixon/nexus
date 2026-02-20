@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: nexus-db
+    environment:
+      POSTGRES_DB: commandcenter
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postPassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - nexus_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  nexus_postgres_data:
