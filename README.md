@@ -45,12 +45,12 @@ nexus/
     └── src/
         ├── pages/    # Login, Register, Dashboard, Settings
         └── components/
-            └── cards/ # Weather, GitHub, News, Spotify, Calendar
+            └── cards/ # Weather, GitHub, News, Spotify, Calendar, Eventbrite, Quote, Pomodoro
 ```
 
 ## Roadmap
 - [x] Project setup and file structure
-- [ ] Database models and repositories
+- [x] Database models and repositories
 - [ ] JWT authentication (backend)
 - [ ] Auth pages (frontend)
 - [ ] Weather integration
