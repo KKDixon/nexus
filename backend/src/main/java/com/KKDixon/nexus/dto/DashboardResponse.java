@@ -11,9 +11,11 @@ public class DashboardResponse {
     private String githubData;
     private String weatherData;
     private String newsData;
-    private String spotifyData;
+    private String spotifyNowPlaying;
+    private String spotifyRecentlyPlayed;
+    private String spotifyTopTracks;
     private String googleCalendarData;
-    private String lastUpdated;
-    private String EventbriteData;
+    private String eventbriteData;
     private String quoteData;
+    private String lastUpdated;
 }
