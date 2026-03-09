@@ -51,7 +51,7 @@ nexus/
 ## Roadmap
 - [x] Project setup and file structure
 - [x] Database models and repositories
-- [ ] JWT authentication (backend)
+- [X] JWT authentication (backend)
 - [ ] Auth pages (frontend)
 - [ ] Weather integration
 - [ ] GitHub integration

@@ -12,8 +12,25 @@ public class WeatherService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
+    private static final String BASE_URL =
+            "https://api.openweathermap.org/data/2.5";
+
     public String fetchWeather(String city) {
-        // TODO: implement OpenWeatherMap API call
-        return "{}";
+        String url = BASE_URL + "/weather" +
+                "?q=" + city +
+                "&appid=" + apiKey +
+                "&units=imperial";
+
+        return restTemplate.getForObject(url, String.class);
+    }
+
+    public String fetchForecast(String city) {
+        String url = BASE_URL + "/forecast" +
+                "?q=" + city +
+                "&appid=" + apiKey +
+                "&units=imperial" +
+                "&cnt=8";
+
+        return restTemplate.getForObject(url, String.class);
     }
 }

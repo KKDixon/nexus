@@ -8,8 +8,21 @@ public class QuoteService {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
+    private static final String BASE_URL = "https://api.quotable.io";
+
+    private static final String FALLBACK_QUOTE =
+            "{\"content\": \"The best way to get started is to quit " +
+            "talking and begin doing.\", \"author\": \"Walt Disney\"}";
+
     public String fetchQuoteOfTheDay() {
-        // TODO: implement quotable.io API call
-        return "{}";
+        try {
+            String result = restTemplate.getForObject(
+                    BASE_URL + "/random",
+                    String.class
+            );
+            return result != null ? result : FALLBACK_QUOTE;
+        } catch (Exception e) {
+            return FALLBACK_QUOTE;
+        }
     }
 }
